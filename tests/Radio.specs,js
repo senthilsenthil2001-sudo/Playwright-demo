@@ -1,0 +1,18 @@
+import { test, expect } from '@playwright/test';
+
+test("radio button", async ({page}) => {
+    await page.goto("https://testautomationpractice.blogspot.com/")
+
+    //Select male
+    const male = await page.locator('input#male')
+    await male.check()
+    // await expect(male).toBeChecked()
+    await expect(page.locator('input#male')).toBeChecked()
+    const female = await page.locator('input#female')
+    await expect(female).not.toBeChecked()
+
+    //select female
+    await female.check()
+    await expect(female).toBeChecked()
+    await expect(male).not.toBeChecked()
+})

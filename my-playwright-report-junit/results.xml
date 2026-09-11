@@ -1,0 +1,46 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="14.328616999999998">
+<testsuite name="Screenshot_Video.spec.js" timestamp="2026-08-31T12:50:51.125Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.358" errors="1">
+<testcase name="Element screenshot" classname="Screenshot_Video.spec.js" time="11.358">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\Screenshot_Video-Element-screenshot-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.locator(...).fill(...).screenshot is not a function" type="TypeError">
+<![CDATA[  [chromium] › Screenshot_Video.spec.js:33:6 › Element screenshot ──────────────────────────────────
+
+    TypeError: page.locator(...).fill(...).screenshot is not a function
+
+      34 |     await page.goto("https://testautomationpractice.blogspot.com/")
+      35 |      const usernameInput = await page.locator('#user-name')
+    > 36 |     await page.locator('//input[@id="name"]').fill('Chidambaram').screenshot({path:'tests/screenshots/'+Date.now()})
+         |                                                                   ^
+      37 | })
+      38 |
+      39 |
+        at C:\Users\senth\Desktop\Playwright\tests\Screenshot_Video.spec.js:36:67
+
+    Error: locator.fill: Test ended.
+    Call log:
+      - waiting for locator('//input[@id="name"]')
+        - locator resolved to <input id="name" required="" type="text" maxlength="15" class="form-control" placeholder="Enter Name"/>
+        - fill("Chidambaram")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      34 |     await page.goto("https://testautomationpractice.blogspot.com/")
+      35 |      const usernameInput = await page.locator('#user-name')
+    > 36 |     await page.locator('//input[@id="name"]').fill('Chidambaram').screenshot({path:'tests/screenshots/'+Date.now()})
+         |                                               ^
+      37 | })
+      38 |
+      39 |
+        at C:\Users\senth\Desktop\Playwright\tests\Screenshot_Video.spec.js:36:47
+
+    Error Context: ..\test-results\Screenshot_Video-Element-screenshot-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>

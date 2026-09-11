@@ -1,0 +1,160 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\senth\\Desktop\\Playwright\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "Screenshot_Video.spec.js"
+    ],
+    "configFile": "C:\\Users\\senth\\Desktop\\Playwright\\playwright.config.js",
+    "rootDir": "C:/Users/senth/Desktop/Playwright/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/senth/Desktop/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/senth/Desktop/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "my-playwright-report-json/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "my-playwright-report-junit/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Screenshot_Video.spec.js",
+      "file": "Screenshot_Video.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Element screenshot",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11358,
+                  "error": {
+                    "message": "TypeError: page.locator(...).fill(...).screenshot is not a function",
+                    "stack": "TypeError: page.locator(...).fill(...).screenshot is not a function\n    at C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js:36:67",
+                    "location": {
+                      "file": "C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js",
+                      "column": 67,
+                      "line": 36
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://testautomationpractice.blogspot.com/\"\u001b[39m)\n \u001b[90m 35 |\u001b[39m      \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#user-name'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//input[@id=\"name\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Chidambaram'\u001b[39m)\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'tests/screenshots/'\u001b[39m\u001b[33m+\u001b[39m\u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()})\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m })\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js",
+                        "column": 67,
+                        "line": 36
+                      },
+                      "message": "TypeError: page.locator(...).fill(...).screenshot is not a function\n\n\u001b[0m \u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://testautomationpractice.blogspot.com/\"\u001b[39m)\n \u001b[90m 35 |\u001b[39m      \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#user-name'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//input[@id=\"name\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Chidambaram'\u001b[39m)\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'tests/screenshots/'\u001b[39m\u001b[33m+\u001b[39m\u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()})\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m })\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js:36:67\u001b[22m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js",
+                        "column": 47,
+                        "line": 36
+                      },
+                      "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('//input[@id=\"name\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input id=\"name\" required=\"\" type=\"text\" maxlength=\"15\" class=\"form-control\" placeholder=\"Enter Name\"/>\u001b[22m\n\u001b[2m    - fill(\"Chidambaram\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n\u001b[0m \u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://testautomationpractice.blogspot.com/\"\u001b[39m)\n \u001b[90m 35 |\u001b[39m      \u001b[36mconst\u001b[39m usernameInput \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#user-name'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//input[@id=\"name\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Chidambaram'\u001b[39m)\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'tests/screenshots/'\u001b[39m\u001b[33m+\u001b[39m\u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()})\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m })\n \u001b[90m 38 |\u001b[39m\n \u001b[90m 39 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js:36:47\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-31T12:50:52.818Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\senth\\Desktop\\Playwright\\test-results\\Screenshot_Video-Element-screenshot-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\senth\\Desktop\\Playwright\\tests\\Screenshot_Video.spec.js",
+                    "column": 67,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "77ad063229e642a20d0a-f702a59e20454f92fb2c",
+          "file": "Screenshot_Video.spec.js",
+          "line": 33,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-31T12:50:50.965Z",
+    "duration": 14328.616999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
